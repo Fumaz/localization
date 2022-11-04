@@ -1,19 +1,50 @@
 plugins {
     id 'java'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 group 'dev.fumaz'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.google.code.gson:gson:2.10'
 }
 
-test {
-    useJUnitPlatform()
+compileJava {
+    options.compilerArgs += ["-parameters"]
+}
+
+shadowJar {
+    archiveFileName = 'localization.jar'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact("build/libs/localization.jar") {
+                extension 'jar'
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name 'fumaz'
+            url 'https://repo.fumaz.dev/repository/maven-releases/'
+
+            credentials {
+                username = project.hasProperty('fumazUsername') ? project.property("fumazUsername") : System.getenv("REPOSITORY_USERNAME")
+                password = project.hasProperty('fumazPassword') ? project.property("fumazPassword") : System.getenv("REPOSITORY_PASSWORD")
+            }
+        }
+    }
+}
+
+tasks.withType(PublishToMavenRepository) {
+    dependsOn('shadowJar')
 }
