@@ -39,7 +39,7 @@ public class Localization {
         }
     }
 
-    public void add(Locale locale, JsonObject json) {
+    public void add(Locale locale, JsonObject json, String... path) {
         Language language = getLanguageByCode(locale.getLanguage());
 
         if (language == null) {
@@ -51,11 +51,14 @@ public class Localization {
 
         json.entrySet().forEach(entry -> {
             String key = entry.getKey();
-            String value = entry.getValue().getAsString();
 
-            Message message = new Message(key, value);
+            if (entry.getValue().isJsonObject()) {
+                add(locale, entry.getValue().getAsJsonObject(), path.length == 0 ? key : path[0] + "." + key);
+            } else {
+                String value = entry.getValue().getAsString();
+                String messageKey = path.length == 0 ? key : path[0] + "." + key;
 
-            if (!finalLanguage.getMessages().contains(message)) {
+                Message message = new Message(messageKey, value);
                 finalLanguage.getMessages().add(message);
             }
         });
