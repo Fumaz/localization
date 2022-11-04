@@ -53,10 +53,11 @@ public class Language {
             return true;
         }
 
-        if (!(o instanceof Language language)) {
+        if (!(o instanceof Language)) {
             return false;
         }
 
+        Language language = (Language) o;
         return Objects.equals(locale, language.locale);
     }
 

@@ -28,10 +28,11 @@ public class Message {
             return true;
         }
 
-        if (!(o instanceof Message message)) {
+        if (!(o instanceof Message)) {
             return false;
         }
 
+        Message message = (Message) o;
         return Objects.equals(key, message.key);
     }
 
