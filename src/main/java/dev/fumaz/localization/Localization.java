@@ -77,6 +77,10 @@ public class Localization {
                 .orElse(null);
     }
 
+    public Set<Language> getLanguages() {
+        return languages;
+    }
+
     public MessageBuilder message(Locale locale, String key) {
         Language language = getLanguageByLocale(locale);
 

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa33588b-cf83-4f7e-9320-935dc4d9c708" name="Changes" comment="getters">
+    <list default="true" id="fa33588b-cf83-4f7e-9320-935dc4d9c708" name="Changes" comment="object prefix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Localization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Localization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667511269956</updated>
       <workItem from="1667511271339" duration="2270000" />
-      <workItem from="1667562403663" duration="2503000" />
+      <workItem from="1667562403663" duration="3215000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1667562256262</created>
@@ -97,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667571887243</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="object prefix">
+      <created>1667572524200</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667572524200</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +118,7 @@
     <MESSAGE value="nested json support" />
     <MESSAGE value="messagebuilder" />
     <MESSAGE value="getters" />
-    <option name="LAST_COMMIT_MESSAGE" value="getters" />
+    <MESSAGE value="object prefix" />
+    <option name="LAST_COMMIT_MESSAGE" value="object prefix" />
   </component>
 </project>
