@@ -18,13 +18,13 @@ public class MessageBuilder {
         this.arguments = new HashMap<>();
     }
 
-    public MessageBuilder prefix(String messagePrefix) {
-        this.messagePrefix = messagePrefix;
+    public MessageBuilder prefix(Object messagePrefix) {
+        this.messagePrefix = Objects.toString(messagePrefix);
         return this;
     }
 
-    public MessageBuilder argumentPrefix(String argumentPrefix) {
-        this.argumentPrefix = argumentPrefix;
+    public MessageBuilder argumentPrefix(Object argumentPrefix) {
+        this.argumentPrefix = Objects.toString(argumentPrefix);
         return this;
     }
 
