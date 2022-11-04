@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa33588b-cf83-4f7e-9320-935dc4d9c708" name="Changes" comment="remove pattern variables">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="fa33588b-cf83-4f7e-9320-935dc4d9c708" name="Changes" comment="nested json support">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/MessageBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Localization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Localization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fumaz/localization/Message.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667511269956</updated>
       <workItem from="1667511271339" duration="2270000" />
-      <workItem from="1667562403663" duration="597000" />
+      <workItem from="1667562403663" duration="1723000" />
     </task>
     <task id="LOCAL-00001" summary="stuff">
       <created>1667562256262</created>
@@ -77,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667562355569</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="nested json support">
+      <created>1667563997946</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667563997946</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +97,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="stuff" />
     <MESSAGE value="remove pattern variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove pattern variables" />
+    <MESSAGE value="nested json support" />
+    <option name="LAST_COMMIT_MESSAGE" value="nested json support" />
   </component>
 </project>

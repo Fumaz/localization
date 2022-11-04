@@ -20,31 +20,12 @@ public class Language {
         return messages;
     }
 
-    public Message getMessage(String key) {
-        return messages.stream()
+    public MessageBuilder message(String key) {
+        return getMessages().stream()
                 .filter(message -> message.getKey().equals(key))
                 .findFirst()
+                .map(Message::builder)
                 .orElse(null);
-    }
-
-    public String format(String key, Map<String, Object> arguments) {
-        Message message = getMessage(key);
-
-        if (message == null) {
-            return null;
-        }
-
-        return message.format(arguments);
-    }
-
-    public String format(String key, Object... arguments) {
-        Message message = getMessage(key);
-
-        if (message == null) {
-            return null;
-        }
-
-        return message.format(arguments);
     }
 
     @Override

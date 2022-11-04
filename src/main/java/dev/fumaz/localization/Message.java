@@ -1,7 +1,5 @@
 package dev.fumaz.localization;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 public class Message {
@@ -12,6 +10,10 @@ public class Message {
     public Message(String key, String value) {
         this.key = key;
         this.value = value;
+    }
+
+    public MessageBuilder builder() {
+        return new MessageBuilder(this);
     }
 
     public String getKey() {
@@ -40,25 +42,4 @@ public class Message {
     public int hashCode() {
         return Objects.hash(key);
     }
-
-    public String format(Map<String, Object> arguments) {
-        String message = value;
-
-        for (Map.Entry<String, Object> entry : arguments.entrySet()) {
-            message = message.replace("{{" + entry.getKey() + "}}", Objects.toString(entry.getValue()));
-        }
-
-        return message;
-    }
-
-    public String format(Object... arguments) {
-        Map<String, Object> map = new HashMap<>();
-
-        for (int i = 0; i < arguments.length - 1; i += 2) {
-            map.put(Objects.toString(arguments[i]), arguments[i + 1]);
-        }
-
-        return format(map);
-    }
-
 }

@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Set;
 
 public class Localization {
@@ -78,34 +77,14 @@ public class Localization {
                 .orElse(null);
     }
 
-    public Message getMessage(String languageCode, String key) {
-        Language language = getLanguageByCode(languageCode);
+    public MessageBuilder message(Locale locale, String key) {
+        Language language = getLanguageByLocale(locale);
 
         if (language == null) {
             return null;
         }
 
-        return language.getMessage(key);
-    }
-
-    public String format(String languageCode, String key, Map<String, Object> arguments) {
-        Message message = getMessage(languageCode, key);
-
-        if (message == null) {
-            return null;
-        }
-
-        return message.format(arguments);
-    }
-
-    public String format(String languageCode, String key, Object... arguments) {
-        Message message = getMessage(languageCode, key);
-
-        if (message == null) {
-            return null;
-        }
-
-        return message.format(arguments);
+        return language.message(key);
     }
 
 }
