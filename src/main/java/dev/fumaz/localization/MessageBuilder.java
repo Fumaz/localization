@@ -33,6 +33,22 @@ public class MessageBuilder {
         return this;
     }
 
+    public Message getMessage() {
+        return message;
+    }
+
+    public String getMessagePrefix() {
+        return messagePrefix;
+    }
+
+    public String getArgumentPrefix() {
+        return argumentPrefix;
+    }
+
+    public Map<String, Object> getArguments() {
+        return arguments;
+    }
+
     public String build() {
         String value = message.getValue();
 
