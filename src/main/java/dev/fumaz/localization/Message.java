@@ -42,4 +42,13 @@ public class Message {
     public int hashCode() {
         return Objects.hash(key);
     }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "key='" + key + '\'' +
+                ", value='" + value + '\'' +
+                '}';
+    }
+
 }

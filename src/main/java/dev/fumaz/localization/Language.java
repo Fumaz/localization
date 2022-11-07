@@ -47,5 +47,12 @@ public class Language {
         return Objects.hash(locale);
     }
 
+    @Override
+    public String toString() {
+        return "Language{" +
+                "locale=" + locale +
+                ", messages=" + messages +
+                '}';
+    }
 
 }
