@@ -61,11 +61,6 @@ public class Localization {
                 finalLanguage.getMessages().add(message);
             }
         });
-
-        languages.forEach(lang -> {
-            System.out.println(lang.toString());
-            lang.getMessages().forEach(message -> System.out.println(message.toString()));
-        });
     }
 
     public Language getLanguageByCode(String code) {
